@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & Services | AIgnite Tech Pvt Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .service-section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border-light);
+      scroll-margin-top: 100px;
+    }
+    .service-section:last-child {
+      border-bottom: none;
+    }
+    .service-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0, 96, 225, 0.1);
+      color: var(--primary);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    .service-section h2 {
+      margin: 0;
+      color: var(--text-dark);
+      font-size: 2rem;
+    }
+    .service-content {
+      color: var(--text-body);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+    }
+    .service-features {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .feature-item {
+      background: var(--bg-alt);
+      padding: 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
+    .feature-item h4 {
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .feature-item p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="global-nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/image.png" alt="AIgnite Logo" onerror="this.style.opacity=0.1;">
+      <h1>AIgnite</h1>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dpdp.html">DPDP Rules 2025</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html" class="btn-primary" style="color: white !important;">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div id="particles-js"></div>
+    <div style="position: relative; z-index: 2;">
+      <h2>About & Services</h2>
+      <p>Discover our comprehensive suite of tech-enabled solutions and IT workforce augmentation strategies designed for modern enterprise compliance.</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-top: 40px; padding-bottom: 80px;">
+
+    <!-- About Us Section -->
+    <section id="about" class="service-section">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg>
+        </div>
+        <h2>About Us</h2>
+      </div>
+      <div class="service-content">
+        <p>We design, develop, customize, and implement software products, platforms, and solutions leveraging AI and other emerging technologies for enterprises, government bodies, and individual stakeholders in compliance with applicable laws.</p>
+        <p>At AIgnite Tech, we believe in a "compliance-first" approach. By combining deep technological expertise with a thorough understanding of regulatory frameworks (such as the DPDP Act), we ensure that the digital transformations we drive are both highly innovative and entirely secure.</p>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="service-section">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        </div>
+        <h2>Our Services</h2>
+      </div>
+      <div class="service-content">
+        <p>We offer tech-enabled services including consulting, system integration, cloud-based solutions, mobile applications, SaaS platforms, APIs, and workflow automation tools across industries such as legal tech, HR tech, fintech, insurance tech, agritech, and others in compliance with applicable laws.</p>
+        
+        <div class="service-features">
+          <div class="feature-item">
+            <h4>Software Development</h4>
+            <p>End-to-end custom application development for web and mobile platforms.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Cloud Solutions</h4>
+            <p>Scalable, secure, and compliant cloud infrastructure and SaaS architectures.</p>
+          </div>
+          <div class="feature-item">
+            <h4>System Integration</h4>
+            <p>Seamlessly connecting disparate software systems and APIs to streamline workflows.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Tech Consulting</h4>
+            <p>Strategic advisory on AI integration, cybersecurity, and regulatory compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT Staffing Section -->
+    <section id="staffing" class="service-section">
+      <div class="service-header">
+        <div class="service-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <h2>IT Staffing & Workforce Augmentation</h2>
+      </div>
+      <div class="service-content">
+        <p>We provide IT staffing, technology manpower outsourcing, and workforce augmentation services for startups, enterprises, multinational corporations, and government bodies in compliance with applicable laws.</p>
+        <p>Scaling a technical team quickly while maintaining high standards is a challenge. Our workforce augmentation services are designed to inject highly-skilled, pre-vetted tech professionals directly into your ongoing projects, ensuring that your development speed matches your business ambitions without compromising on compliance or quality.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="global-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>AIgnite Tech Pvt Ltd</h4>
+        <p>Igniting Impactful Innovation through AI. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dpdp.html">DPDP Rules, 2025</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="DPDP_policy.html">DPDP Policy</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:director@aignitech.com">director@aignitech.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    if(document.getElementById('year')) document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Particles.js
+    if(document.getElementById('particles-js')) {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#0060e1" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.3, "random": false },
+          "size": { "value": 3, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#0ea5e9",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" },
+            "resize": true
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    }
+
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      $('.hero-section').css('background-position', 'center ' + (scroll * 0.4) + 'px');
+      
+      const nav = document.getElementById('navbar');
+      if(nav) {
+        if(window.scrollY > 30) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -4,220 +4,169 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Disclaimer — AIgnite Tech Pvt Ltd</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #7c3aed;
-      --secondary: #06b6d4;
-      --bg1: #0b1120;
-      --bg2: #111827;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --radius: 16px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      color: var(--text);
-    }
-
-    header {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      padding: 16px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    header.scrolled { background: rgba(15,23,42,0.9); }
-
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand img {
-      width: 50px; height: 50px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.1);
-      padding: 6px;
-    }
-    .brand h1 { font-size: 20px; font-weight: 600; }
-
-    nav { display: flex; gap: 24px; }
-    nav a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      width: 0;
-      height: 2px;
-      background: var(--secondary);
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s;
-    }
-    nav a:hover::after { width: 100%; }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: radial-gradient(circle at top right, rgba(124,58,237,0.15), rgba(6,182,212,0.05) 60%);
-    }
-    .hero h2 {
-      font-size: 36px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 18px;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 28px;
-      border-radius: var(--radius);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    }
-
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 16px;
-      color: var(--secondary);
-    }
-
-    .card p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    footer {
-      margin-top: auto;
-      text-align: center;
-      padding: 25px 10px;
-      background: rgba(255,255,255,0.08);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer span { color: var(--secondary); }
-
-    @media (max-width: 768px) {
-      .hero h2 { font-size: 30px; }
-      nav { gap: 16px; }
-      .card p { font-size: 15px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="global-nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/image.png" alt="AIgnite Logo" onerror="this.style.opacity=0.1;">
+      <h1>AIgnite</h1>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dpdp.html">DPDP Rules 2025</a>
+      <a href="disclaimer.html" class="active">Disclaimer</a>
+      <a href="contact.html" class="btn-primary" style="color: white !important;">Contact Us</a>
+    </nav>
+  </header>
 
-<header id="navbar">
-  <div class="brand">
-    <img src="image.png" alt="AIgnite Logo">
-    <h1>AIgnite Tech Pvt Ltd</h1>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="dpdp.html">DPDP Rules, 2025</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-</header>
+  <section class="hero-section">
+    <div id="particles-js"></div>
+    <h2>Disclaimer</h2>
+    <p>Important information regarding the accuracy, scope, and usage of the content on this website.</p>
+  </section>
 
-<section class="hero">
-  <h2>Disclaimer</h2>
-  <p>Important information regarding the accuracy, scope, and usage of the content on this website.</p>
-</section>
+  <main class="container">
+    <div class="card" style="max-width: 900px; margin: 0 auto;">
+      <h3>General Disclaimer</h3>
+      <p style="margin-bottom: 20px;">
+        The content provided on this website, including documents, notifications, rules,
+        and other materials, is made available for general informational purposes only.
+        While reasonable efforts are taken to ensure accuracy, AIgnite Tech Pvt Ltd makes
+        no guarantees, warranties, or representations regarding the completeness, reliability,
+        or exactness of the content.
+      </p>
 
-<section class="section">
+      <p style="margin-bottom: 30px;">
+        Users are advised not to treat the content as a substitute for professional legal or
+        regulatory advice. For official and legally binding information, always refer to the
+        relevant Government of India publications, official gazette notifications, or consult
+        appropriate authorities.
+      </p>
 
-  <div class="card">
-    <h3>General Disclaimer</h3>
-    <p>
-      The content provided on this website, including documents, notifications, rules,
-      and other materials, is made available for general informational purposes only.
-      While reasonable efforts are taken to ensure accuracy, AIgnite Tech Pvt Ltd makes
-      no guarantees, warranties, or representations regarding the completeness, reliability,
-      or exactness of the content.
-    </p>
+      <h3>Limitation of Liability</h3>
+      <p style="margin-bottom: 30px;">
+        AIgnite Tech Pvt Ltd shall not be held responsible for any loss, damage, or consequence
+        arising from the direct or indirect use of the content provided on this website.
+        This includes, but is not limited to, errors, omissions, misunderstandings, or reliance
+        placed on the information by the user.
+      </p>
 
-    <p>
-      Users are advised not to treat the content as a substitute for professional legal or
-      regulatory advice. For official and legally binding information, always refer to the
-      relevant Government of India publications, official gazette notifications, or consult
-      appropriate authorities.
-    </p>
+      <h3>External Links</h3>
+      <p style="margin-bottom: 30px;">
+        This website may contain links to external websites for convenience or reference.
+        AIgnite Tech Pvt Ltd does not control, endorse, or guarantee the content, accuracy,
+        or availability of any external site.
+      </p>
 
-    <h3>Limitation of Liability</h3>
-    <p>
-      AIgnite Tech Pvt Ltd shall not be held responsible for any loss, damage, or consequence
-      arising from the direct or indirect use of the content provided on this website.
-      This includes, but is not limited to, errors, omissions, misunderstandings, or reliance
-      placed on the information by the user.
-    </p>
+      <h3>Updates & Revisions</h3>
+      <p style="margin-bottom: 30px;">
+        Information on this site may be updated, modified, or removed without prior notice.
+        Users are encouraged to revisit the website periodically to stay informed about
+        changes or updates.
+      </p>
 
-    <h3>External Links</h3>
-    <p>
-      This website may contain links to external websites for convenience or reference.
-      AIgnite Tech Pvt Ltd does not control, endorse, or guarantee the content, accuracy,
-      or availability of any external site.
-    </p>
+      <h3>Consent</h3>
+      <p>
+        By using this website, you hereby consent to this disclaimer and agree to its terms.
+      </p>
+    </div>
+  </main>
 
-    <h3>Updates & Revisions</h3>
-    <p>
-      Information on this site may be updated, modified, or removed without prior notice.
-      Users are encouraged to revisit the website periodically to stay informed about
-      changes or updates.
-    </p>
+  <footer class="global-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>AIgnite Tech Pvt Ltd</h4>
+        <p>Igniting Impactful Innovation through AI. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dpdp.html">DPDP Rules, 2025</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="DPDP_policy.html">DPDP Policy</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:director@aignitech.com">director@aignitech.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-    <h3>Consent</h3>
-    <p>
-      By using this website, you hereby consent to this disclaimer and agree to its terms.
-    </p>
-  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    if(document.getElementById('year')) document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Particles.js
+    if(document.getElementById('particles-js')) {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#0060e1" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.3, "random": false },
+          "size": { "value": 3, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#0ea5e9",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" },
+            "resize": true
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    }
 
-</section>
-
-<footer>
-  © <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  window.addEventListener("scroll", () => {
-    const nav = document.getElementById("navbar");
-    if (window.scrollY > 30) nav.classList.add("scrolled");
-    else nav.classList.remove("scrolled");
-  });
-</script>
-
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      $('.hero-section').css('background-position', 'center ' + (scroll * 0.4) + 'px');
+      
+      const nav = document.getElementById('navbar');
+      if(nav) {
+        if(window.scrollY > 30) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>

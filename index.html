@@ -4,199 +4,282 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AIgnite Tech Pvt Ltd — Igniting Impactful Innovation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #7c3aed;
-      --secondary: #06b6d4;
-      --bg1: #0b1120;
-      --bg2: #111827;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --radius: 16px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      padding: 16px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      transition: background 0.3s;
-    }
-
-    header.scrolled { background: rgba(15, 23, 42, 0.9); }
-
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand img {
-      width: 50px;
-      height: 50px;
-      border-radius: 8px;
-      background: rgba(255,255,255,0.1);
-      padding: 6px;
-    }
-    .brand h1 { font-size: 20px; font-weight: 600; }
-
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-      transition: color 0.3s;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: var(--secondary);
-      left: 0;
-      bottom: -4px;
-      transition: width 0.3s;
-    }
-    nav a:hover::after { width: 100%; }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: radial-gradient(circle at top right, rgba(124,58,237,0.15), rgba(6,182,212,0.05) 60%);
-    }
-    .hero h2 {
-      font-size: 42px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 16px;
-      font-weight: 700;
-    }
-    .hero p {
-      color: var(--muted);
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-      font-size: 18px;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    }
-    .card h3 { margin-bottom: 10px; color: var(--secondary); font-size: 20px; }
-    .card p { color: var(--muted); line-height: 1.6; }
-
-    footer {
-      background: rgba(255,255,255,0.08);
-      text-align: center;
-      padding: 25px 10px;
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: auto;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
-    footer span { color: var(--secondary); }
-
-    a.mail {
-      color: var(--secondary);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a.mail:hover { color: var(--primary); }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav { flex-wrap: wrap; }
-      .hero h2 { font-size: 32px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header id="navbar">
-    <div class="brand">
-      <img src="image.png" alt="AIgnite Logo" onerror="this.style.opacity=0.1;">
-      <h1>AIgnite Tech Pvt Ltd</h1>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="dpdp.html">DPDP Rules, 2025</a>
+  <header class="global-nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/image.png" alt="AIgnite Logo" onerror="this.style.opacity=0.1;">
+      <h1>AIgnite</h1>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dpdp.html">DPDP Rules 2025</a>
       <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html" class="btn-primary" style="color: white !important;">Contact Us</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Igniting Impactful Innovation through AI</h2>
-    <p>AI first and compliance first. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
-  </section>
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    .hero-layout {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      text-align: left;
+    }
+    .hero-layout p {
+      margin: 0;
+    }
+    .hero-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 96, 225, 0.15);
+      animation: float 6s ease-in-out infinite;
+    }
+    @media (max-width: 768px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-layout p {
+        margin: 0 auto;
+      }
+    }
+  </style>
 
-  <section class="section" id="about">
-    <div class="card">
-      <h3>About Us</h3>
-      <p>We design, develop, customize, and implement software products, platforms, and solutions leveraging AI and other emerging technologies for enterprises, government bodies, and individual stakeholders in compliance with applicable laws.</p>
+  <section class="hero-section hero-large">
+    <div id="particles-js"></div>
+    <div class="hero-layout">
+      <div>
+        <h2 style="text-align: left;">Igniting Impactful Innovation through AI</h2>
+        <p>AI first and compliance first. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
+        <div style="margin-top: 36px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="services.html" class="btn-primary" style="padding: 14px 32px; font-size: 16px;">Explore Services</a>
+          <a href="contact.html" class="btn-outline" style="background: rgba(255,255,255,0.8); padding: 14px 32px; font-size: 16px;">Contact Us</a>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <img src="assets/privacy_hero.png" alt="Privacy and Tech Innovation" class="hero-img">
+      </div>
     </div>
   </section>
 
-  <section class="section" id="services">
-    <div class="card">
-      <h3>Our Services</h3>
-      <p>We offer tech-enabled services including consulting, system integration, cloud-based solutions, mobile applications, SaaS platforms, APIs, and workflow automation tools across industries such as legal tech, HR tech, fintech, insurance tech, agritech, and others in compliance with applicable laws.</p>
+  <main class="container" style="padding-top: 80px; padding-bottom: 80px; display: flex; flex-direction: column; gap: 80px;">
+    
+    <style>
+      .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+      @media (max-width: 768px) {
+        .feature-row { grid-template-columns: 1fr !important; gap: 40px; }
+        .feature-row > div.text-col { order: 2 !important; }
+        .feature-row > div.media-col { order: 1 !important; }
+      }
+      @keyframes blink { 50% { opacity: 0; } }
+      .cmd-panel {
+        background: #1e1e1e; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,96,225,0.15); 
+        width: 100%; font-family: 'Consolas', 'Courier New', monospace; font-size: 0.95rem; border: 1px solid #333;
+      }
+    </style>
+
+    <!-- About Us Row -->
+    <div class="feature-row">
+      <div class="media-col">
+        <img src="assets/about_us.png" alt="About Us" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+      </div>
+      <div class="text-col">
+        <span style="background: rgba(0, 96, 225, 0.1); color: var(--primary); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; margin-bottom: 16px; display: inline-block;">Who We Are</span>
+        <h3 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 20px; color: var(--text-dark); letter-spacing: -0.5px;">About Us</h3>
+        <p style="color: var(--text-body); font-size: 1.15rem; line-height: 1.7; margin-bottom: 24px;">We design, develop, customize, and implement software products, platforms, and solutions leveraging AI and other emerging technologies for enterprises, government bodies, and individual stakeholders in compliance with applicable laws.</p>
+        <a href="services.html#about" class="btn-outline">Read More</a>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>IT Staffing & Workforce Augmentation</h3>
-      <p>We provide IT staffing, technology manpower outsourcing, and workforce augmentation services for startups, enterprises, multinational corporations, and government bodies in compliance with applicable laws.</p>
+    <!-- Our Services Row (CMD Panel) -->
+    <div class="feature-row">
+      <div class="text-col">
+        <span style="background: rgba(0, 96, 225, 0.1); color: var(--primary); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; margin-bottom: 16px; display: inline-block;">Solutions</span>
+        <h3 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 20px; color: var(--text-dark); letter-spacing: -0.5px;">Our Services</h3>
+        <p style="color: var(--text-body); font-size: 1.15rem; line-height: 1.7; margin-bottom: 24px;">We offer tech-enabled services including consulting, system integration, cloud-based solutions, mobile applications, SaaS platforms, APIs, and workflow automation tools across industries such as legal tech, HR tech, fintech, insurance tech, agritech, and others in compliance with applicable laws.</p>
+        <a href="services.html#services" class="btn-outline">Read More</a>
+      </div>
+      <div class="media-col">
+        <div class="cmd-panel">
+          <div style="background: #2d2d2d; padding: 12px 16px; display: flex; gap: 8px; align-items: center;">
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e;"></div>
+            <div style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f;"></div>
+            <span style="color: #888; font-size: 0.8rem; margin-left: auto;">bash — start-services</span>
+          </div>
+          <div style="padding: 24px; color: #a9b7c6; text-align: left; line-height: 1.6;">
+            <p style="margin:0;"><span style="color: #cc7832;">import</span> { <span style="color: #9876aa;">AICore</span>, <span style="color: #9876aa;">Compliance</span> } <span style="color: #cc7832;">from</span> <span style="color: #6a8759;">'@aignite/sdk'</span>;</p>
+            <br>
+            <p style="margin:0;"><span style="color: #808080;">// Initialize Enterprise Services</span></p>
+            <p style="margin:0;"><span style="color: #cc7832;">const</span> <span style="color: #ffc66d;">serviceEngine</span> = <span style="color: #cc7832;">new</span> <span style="color: #ffc66d;">AICore</span>({</p>
+            <p style="margin:0; padding-left: 20px;">mode: <span style="color: #6a8759;">'production'</span>,</p>
+            <p style="margin:0; padding-left: 20px;">compliance: <span style="color: #ffc66d;">Compliance</span>.<span style="color: #9876aa;">DPDP_2025</span></p>
+            <p style="margin:0;">});</p>
+            <br>
+            <p style="margin:0;"><span style="color: #ffc66d;">serviceEngine</span>.<span style="color: #ffc66d;">deploy</span>().<span style="color: #ffc66d;">then</span>(() <span style="color: #cc7832;">=&gt;</span> {</p>
+            <p style="margin:0; padding-left: 20px;">console.<span style="color: #ffc66d;">log</span>(<span style="color: #6a8759;">'Enterprise Services Online. ✓'</span>);</p>
+            <p style="margin:0;">});<span style="display:inline-block; width:8px; height:16px; background:#fff; animation: blink 1s step-end infinite; margin-left:4px; vertical-align: middle;"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IT Staffing Row -->
+    <div class="feature-row">
+      <div class="media-col">
+        <img src="assets/it_staffing.png" alt="IT Staffing" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+      </div>
+      <div class="text-col">
+        <span style="background: rgba(0, 96, 225, 0.1); color: var(--primary); padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 0.85rem; margin-bottom: 16px; display: inline-block;">Workforce</span>
+        <h3 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 20px; color: var(--text-dark); letter-spacing: -0.5px;">IT Staffing & Augmentation</h3>
+        <p style="color: var(--text-body); font-size: 1.15rem; line-height: 1.7; margin-bottom: 24px;">We provide IT staffing, technology manpower outsourcing, and workforce augmentation services for startups, enterprises, multinational corporations, and government bodies in compliance with applicable laws.</p>
+        <a href="services.html#staffing" class="btn-outline">Read More</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Security Section -->
+  <section class="security-section" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(0, 96, 225, 0.05)); padding: 80px 5%; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container" style="padding: 0; text-align: center;">
+      <span style="background: rgba(0, 96, 225, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; margin-bottom: 16px; display: inline-block;">Enterprise Security</span>
+      <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 24px; color: var(--text-dark); letter-spacing: -0.5px;">Uncompromising Data Privacy</h2>
+      <p style="font-size: 1.1rem; color: var(--text-body); max-width: 700px; margin: 0 auto 50px; line-height: 1.8;">At AIgnite Tech, security isn't an afterthought—it's the foundation of everything we build. We strictly adhere to the DPDP Act and global data protection standards, ensuring your enterprise data remains completely secure, private, and localized.</p>
+      
+      <div class="grid-3" style="text-align: left;">
+        <div class="card" style="border: none; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <div class="card-icon" style="background: rgba(15, 118, 110, 0.1); color: #0f766e;">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-dark);">DPDP Compliant</h4>
+          <p style="font-size: 1rem; color: var(--text-body); margin: 0; line-height: 1.6;">Fully aligned with India's Digital Personal Data Protection Act, ensuring transparent and secure processing of personal data.</p>
+        </div>
+        
+        <div class="card" style="border: none; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <div class="card-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-dark);">End-to-End Encryption</h4>
+          <p style="font-size: 1rem; color: var(--text-body); margin: 0; line-height: 1.6;">Industry-leading encryption protocols are deployed across all software products and platforms to protect data in transit and at rest.</p>
+        </div>
+
+        <div class="card" style="border: none; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <div class="card-icon" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--text-dark);">Local First Processing</h4>
+          <p style="font-size: 1rem; color: var(--text-body); margin: 0; line-height: 1.6;">Our consumer mobile apps prioritize local-only data processing to ensure personal information never leaves the user's device.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <div class="card">
-      <h3>Contact Us</h3>
-      <p>Email: <a class="mail" href="mailto:director@aignitech.com">director@aignitech.com</a></p>
+  <footer class="global-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>AIgnite Tech Pvt Ltd</h4>
+        <p>Igniting Impactful Innovation through AI. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dpdp.html">DPDP Rules, 2025</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="DPDP_policy.html">DPDP Policy</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:director@aignitech.com">director@aignitech.com</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
-
-  <footer>
-    <p>© <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.</p>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.</p>
+    </div>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    window.addEventListener('scroll', ()=>{
+    if(document.getElementById('year')) document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Particles.js
+    if(document.getElementById('particles-js')) {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#0060e1" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.3, "random": false },
+          "size": { "value": 3, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#0ea5e9",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" },
+            "resize": true
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    }
+
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      $('.hero-section').css('background-position', 'center ' + (scroll * 0.4) + 'px');
+      
       const nav = document.getElementById('navbar');
-      if(window.scrollY > 30) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
+      if(nav) {
+        if(window.scrollY > 30) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
     });
   </script>
 </body>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Products — AIgnite Tech Pvt Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="global-nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/image.png" alt="AIgnite Logo" onerror="this.style.opacity=0.1;">
+      <h1>AIgnite</h1>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="dpdp.html">DPDP Rules 2025</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html" class="btn-primary" style="color: white !important;">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div id="particles-js"></div>
+    <h2>Our Products</h2>
+    <p>Discover our mobile applications designed to empower users with privacy insights and data protection compliance tools.</p>
+  </section>
+
+  <main class="container">
+    <div class="grid-2">
+      <div class="card" style="align-items: center; text-align: center;">
+        <h3>DPDP Rules, 2025</h3>
+        <p>Awareness and assistance for DPDP Act compliance in India. Stay up-to-date with the latest regulations, guidelines, and necessary steps to ensure robust personal data protection and legal compliance.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.aignite.dpdp" target="_blank" style="margin-top: 24px;">
+          <img style="height: 55px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+        </a>
+      </div>
+      <div class="card" style="align-items: center; text-align: center;">
+        <h3>Aignite Privacy Manager</h3>
+        <p>A comprehensive privacy dashboard that shows all permissions and access granted to apps on your mobile device. Take control of your data by monitoring which apps have access to your camera, microphone, and location, completely offline.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.aignite.privacy_manager" target="_blank" style="margin-top: 24px;">
+          <img style="height: 55px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="global-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>AIgnite Tech Pvt Ltd</h4>
+        <p>Igniting Impactful Innovation through AI. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dpdp.html">DPDP Rules, 2025</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="DPDP_policy.html">DPDP Policy</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:director@aignitech.com">director@aignitech.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    if(document.getElementById('year')) document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize Particles.js
+    if(document.getElementById('particles-js')) {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#0060e1" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.3, "random": false },
+          "size": { "value": 3, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#0ea5e9",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" },
+            "resize": true
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    }
+
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      $('.hero-section').css('background-position', 'center ' + (scroll * 0.4) + 'px');
+      
+      const nav = document.getElementById('navbar');
+      if(nav) {
+        if(window.scrollY > 30) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>

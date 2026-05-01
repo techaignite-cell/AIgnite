@@ -5,139 +5,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>DPDP Rules 2025 — AIgnite Tech Pvt Ltd</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #7c3aed;
-      --secondary: #06b6d4;
-      --bg1: #0b1120;
-      --bg2: #111827;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      font-family: 'Poppins', sans-serif;
-    }
-    body { 
-      margin:0; 
-      background:linear-gradient(135deg,var(--bg1),var(--bg2)); 
-      color:var(--text); 
-    }
-    
-    header {
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(12px);
-      padding:16px 40px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 4px 20px rgba(0,0,0,0.3);
-    }
-
-    nav a { 
-      color:var(--text); 
-      margin-left:25px; 
-      text-decoration:none; 
-      font-weight:500; 
-    }
-
-    .hero { 
-      text-align:center; 
-      padding:60px 20px 20px; 
-    }
-
-    .hero h1 {
-      font-size:38px;
-      font-weight:700;
-      background:linear-gradient(90deg,var(--primary),var(--secondary));
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
-
-    .download-btn {
-      display:inline-block;
-      background:var(--secondary);
-      color:#000;
-      padding:10px 20px;
-      border-radius:8px;
-      margin-top:16px;
-      font-weight:600;
-      text-decoration:none;
-    }
-
-    /* ================= FULLY CENTERED CONTENT ================= */
-    .content {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 20px 7px;
-      color: var(--text);
-      line-height: 1.4;
-      text-align: center;     /* <-- CENTER ALL TEXT */
-    }
-    p {
-  margin-bottom: 5px; /* space after every paragraph */
-}
-
-    #extra-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.55s ease;
-      text-align: center;     /* <-- CENTER EXPANDED TEXT */
-    }
-
-    /* Center the Read More button perfectly */
-    .read-more-center {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    
-    .read-more-btn {
-      padding: 12px 24px;
-      background: var(--secondary);
-      color: #000;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    footer {
-      background:rgba(255,255,255,0.08);
-      text-align:center;
-      padding:20px;
-      color:var(--muted);
-      margin-top:40px;
-      font-size:14px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="global-nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="assets/image.png" alt="AIgnite Logo" onerror="this.style.opacity=0.1;">
+      <h1>AIgnite</h1>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="dpdp.html" class="active">DPDP Rules 2025</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html" class="btn-primary" style="color: white !important;">Contact Us</a>
+    </nav>
+  </header>
 
-<header>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <img src="image.png" style="width:50px;height:50px;border-radius:8px;background:rgba(255,255,255,0.1);padding:6px;">
-    <h1 style="font-size:20px;">AIgnite Tech Pvt Ltd</h1>
-  </div>
+  <section class="hero-section">
+    <div id="particles-js"></div>
+    <h2>Digital Personal Data Protection Rules, 2025</h2>
+    <a href="assets/dpdp_rules_2025.pdf" download class="btn-primary" style="margin-top: 16px; position: relative; z-index: 2;">Download Official PDF</a>
+  </section>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="dpdp.html">DPDP Rules 2025</a>
-    <a href="disclaimer.html">Disclaimer</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Digital Personal Data Protection Rules, 2025</h1>
-  <a href="dpdp_rules_2025.pdf" download class="download-btn">Download Official PDF</a>
-</section>
-
-<section class="content">
+  <main class="content-doc">
 
 <b>MINISTRY OF ELECTRONICS AND INFORMATION TECHNOLOGY</b><br>
 <b>NOTIFICATION</b><br>
@@ -156,7 +48,7 @@ to public;
 </p>
 
 <div class="read-more-center">
-  <div class="read-more-btn" onclick="toggleMore()">Read More</div>
+  <div class="btn-outline" onclick="toggleMore()">Read More</div>
 </div>
 
 <div id="extra-content">
@@ -1836,24 +1728,110 @@ Purposes for which provisions of sub-sections (1) and (3) of section 9 shall not
 
 </div>
 
-</section>
+</main>
 
-<footer>
-  © <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.
-</footer>
+  <footer class="global-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>AIgnite Tech Pvt Ltd</h4>
+        <p>Igniting Impactful Innovation through AI. Provisioning AI assisted compliance in line with DPDP Act and other applicable laws.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="dpdp.html">DPDP Rules, 2025</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="DPDP_policy.html">DPDP Policy</a></li>
+          <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:director@aignitech.com">director@aignitech.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> AIgnite Tech Pvt Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  if(document.getElementById('year')) document.getElementById("year").textContent = new Date().getFullYear();
 
-function toggleMore() {
-  const box = document.getElementById("extra-content");
-  const btn = document.querySelector(".read-more-btn");
+  function toggleMore() {
+    const box = document.getElementById("extra-content");
+    const btn = document.querySelector(".btn-outline");
 
-  box.style.maxHeight = box.scrollHeight + "px";
+    box.style.maxHeight = box.scrollHeight + "px";
 
-  // Remove button after expanding
-  btn.style.display = "none";
-}
+    // Remove button after expanding
+    if(btn) btn.style.display = "none";
+  }
+
+  // Initialize Particles.js
+  if(document.getElementById('particles-js')) {
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#0060e1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#0ea5e9",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  }
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    $('.hero-section').css('background-position', 'center ' + (scroll * 0.4) + 'px');
+    
+    const nav = document.getElementById('navbar');
+    if(nav) {
+      if(window.scrollY > 30) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
+  });
 </script>
 
 </body>
